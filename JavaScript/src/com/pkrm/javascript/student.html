@@ -1,0 +1,103 @@
+<html>
+<h1 id="myId"></h1>
+<head>
+<h1> Student Record </h1>
+
+<script>
+document.getElementById('myId').innerHTML="hi";
+
+function myStudent(){
+  var a=document.getElementById('stname').value;
+  if(!isNaN(a)){
+  alert("please enter non numeric values");
+  }
+   var b=document.getElementById('stid').value;
+   if(isNaN(b)){
+   alert("Id Contains numeric values only");
+   }
+   var c=parseInt(document.getElementById('maths').value);
+   if(c<0||c>100){
+   alert("marks should be in between 0 and 100");
+   }
+   var d=parseInt(document.getElementById('physics').value);
+   if(d<0||d>100){
+   alert("marks should be in between 0 and 100");
+   }
+   var e=parseInt(document.getElementById('chemistry').value);
+   if(e<0 || e>100){
+   alert("marks should be in between 0 and 100");
+   }
+   var totalMarks =c+d+e;
+   var avgMarks=((totalMarks)/3);
+   
+   
+            document.getElementById('studentname').value=a;
+            document.getElementById('studentid').value=b;
+            document.getElementById('totalmarks').value=totalMarks; 
+            document.getElementById('averagemarks').value=avgMarks;
+			}
+			
+   </script>
+   </head>
+<body>
+
+<label for="studentname">Student Name</label><br>
+<input type="text" id="stname"><br>
+
+<label for="studentid">Student Id</label><br>
+<input type="number" id="stid"><br>
+
+<label for="studentmarks"> Mathematics</label><br>
+<input type="number" id="maths"><br>
+
+<label for="studentmarks">Physics</label><br>
+<input type="number" id="physics"><br>
+
+<label for="studentmarks">Chemistry</label><br>
+<input type="number" id="chemistry"><br>
+
+<input type="button" onclick="myStudent();" value="submit">
+
+<h2>Student Report</h2>
+<label for="studentname">Student Name</label><br>
+<input type="text" id="studentname"><br>
+
+<label for="studentid">Student Id</label><br>
+<input type="number" id="studentid"><br>
+
+
+<label for="totalmarks">Total marks</label><br>
+<input type="number" id="totalmarks"><br>
+
+<label for="averagemarks">Average marks</label><br>
+<input type="number" id="averagemarks"><br>
+
+ <!--<fieldset style="width:600px">
+                <legend><b>Student Input Section:</b></legend>
+                Student Name:<input type="text" id="stname">   
+                Student Id:<input type="number" id="stid"> <br/><br/>
+                <table border="1">
+                    <tr><td>Mathematics</td><td><input type="number" id="mathematics"></td></tr>
+                    <tr><td>Physics</td><td><input type="number" id="physics"></td></tr>
+                    <tr><td>Chemistry</td><td><input type="text" id="chemistry"></td></tr>
+                              
+                </table><br/><br/>
+                <input type="button" onclick="myStudent();" value="submit">
+            </fieldset>
+            
+            <h2>Report Card</h2>
+            
+            <table border="1">
+                <tr><td>Student Name</td><td><input type="text" id="StudentName" readonly></td></tr>
+                <tr><td>Student Id</td><td><input type="text" id="StudentId" readonly></td></tr>
+                <tr><td>Total Marks</td><td><input type="text" id="totalmarks" readonly></td></tr>
+                <tr><td>Average Marks</td><td><input type="text" id="averagemarks" readonly></td></tr>
+            </table>-->
+
+
+</body>
+</html>
+
+
+
+
